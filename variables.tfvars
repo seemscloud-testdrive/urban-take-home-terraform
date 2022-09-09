@@ -45,20 +45,32 @@ aaa_cluster_aaa-min_version       = "1.22.11-gke.400"
 aaa_cluster_aaa-init              = 1
 
 #############################################
-# GKE Pools
+# Jenkins / VPN
 #
-aaa_node_pool_aaa-preemptible = true
-aaa_node_pool_aaa-name        = "secondary"
-aaa_node_pool_aaa-tags        = ["cluster", "secondary-pool", "all"]
-aaa_node_pool_aaa-type        = "e2-standard-2"
-aaa_node_pool_aaa-init        = 1
-aaa_node_pool_aaa-min         = 1
-aaa_node_pool_aaa-max         = 1
+aaa_instance_bbb-name                  = "jenkins"
+aaa_instance_bbb-machine_type          = "e2-highcpu-2"
+aaa_instance_bbb-zone                  = null
+aaa_instance_bbb-tags                  = ["jenkins", "all"]
+aaa_instance_bbb-cidr                  = "10.0.11.0/24"
+aaa_instance_bbb-address_type          = "EXTERNAL"
+aaa_instance_bbb-desired_status        = "RUNNING"
+aaa_instance_bbb-boot_image            = "ubuntu-2004-lts"
+aaa_instance_bbb-boot_disk_size        = 64
+aaa_instance_bbb-boot_disk_type        = "pd-ssd"
+aaa_instance_bbb-boot_disk_auto_delete = false
+aaa_instance_bbb-preemptible           = true
+aaa_instance_bbb-automatic_restart     = false
 
-aaa_node_pool_bbb-preemptible = true
-aaa_node_pool_bbb-name        = "primary"
-aaa_node_pool_bbb-tags        = ["cluster", "primary-pool", "all"]
-aaa_node_pool_bbb-type        = "e2-standard-2"
-aaa_node_pool_bbb-init        = 1
-aaa_node_pool_bbb-min         = 1
-aaa_node_pool_bbb-max         = 1
+aaa_instance_ccc-name                  = "vpn"
+aaa_instance_ccc-machine_type          = "e2-highcpu-2"
+aaa_instance_ccc-zone                  = null
+aaa_instance_ccc-tags                  = ["vpn", "all"]
+aaa_instance_ccc-cidr                  = "10.0.12.0/24"
+aaa_instance_ccc-address_type          = "EXTERNAL"
+aaa_instance_ccc-desired_status        = "RUNNING"
+aaa_instance_ccc-boot_image            = "ubuntu-2004-lts"
+aaa_instance_ccc-boot_disk_size        = 64
+aaa_instance_ccc-boot_disk_type        = "pd-ssd"
+aaa_instance_ccc-boot_disk_auto_delete = false
+aaa_instance_ccc-preemptible           = true
+aaa_instance_ccc-automatic_restart     = false

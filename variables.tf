@@ -45,20 +45,32 @@ variable "aaa_cluster_aaa-min_version" { type = string }
 variable "aaa_cluster_aaa-init" { type = number }
 
 #############################################
-# GKE Pools
+# VPN
 #
-variable "aaa_node_pool_aaa-preemptible" { type = string }
-variable "aaa_node_pool_aaa-name" { type = string }
-variable "aaa_node_pool_aaa-tags" { type = list(string) }
-variable "aaa_node_pool_aaa-type" { type = string }
-variable "aaa_node_pool_aaa-init" { type = string }
-variable "aaa_node_pool_aaa-min" { type = string }
-variable "aaa_node_pool_aaa-max" { type = string }
+variable "aaa_instance_bbb-name" { type = string }
+variable "aaa_instance_bbb-machine_type" { type = string }
+variable "aaa_instance_bbb-zone" { type = string }
+variable "aaa_instance_bbb-tags" { type = list(string) }
+variable "aaa_instance_bbb-cidr" { type = string }
+variable "aaa_instance_bbb-address_type" { type = string }
+variable "aaa_instance_bbb-desired_status" { type = string }
+variable "aaa_instance_bbb-boot_image" { type = string }
+variable "aaa_instance_bbb-boot_disk_size" { type = number }
+variable "aaa_instance_bbb-boot_disk_type" { type = string }
+variable "aaa_instance_bbb-boot_disk_auto_delete" { type = bool }
+variable "aaa_instance_bbb-preemptible" { type = bool }
+variable "aaa_instance_bbb-automatic_restart" { type = bool }
 
-variable "aaa_node_pool_bbb-preemptible" { type = string }
-variable "aaa_node_pool_bbb-name" { type = string }
-variable "aaa_node_pool_bbb-tags" { type = list(string) }
-variable "aaa_node_pool_bbb-type" { type = string }
-variable "aaa_node_pool_bbb-init" { type = string }
-variable "aaa_node_pool_bbb-min" { type = string }
-variable "aaa_node_pool_bbb-max" { type = string }
+variable "aaa_instance_ccc-name" { type = string }
+variable "aaa_instance_ccc-machine_type" { type = string }
+variable "aaa_instance_ccc-zone" { type = string }
+variable "aaa_instance_ccc-tags" { type = list(string) }
+variable "aaa_instance_ccc-cidr" { type = string }
+variable "aaa_instance_ccc-address_type" { type = string }
+variable "aaa_instance_ccc-desired_status" { type = string }
+variable "aaa_instance_ccc-boot_image" { type = string }
+variable "aaa_instance_ccc-boot_disk_size" { type = number }
+variable "aaa_instance_ccc-boot_disk_type" { type = string }
+variable "aaa_instance_ccc-boot_disk_auto_delete" { type = bool }
+variable "aaa_instance_ccc-preemptible" { type = bool }
+variable "aaa_instance_ccc-automatic_restart" { type = bool }
