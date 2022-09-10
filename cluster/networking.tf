@@ -18,10 +18,3 @@ resource "google_compute_subnetwork" "cluster" {
     ip_cidr_range = var.cluster_service_cidr
   }
 }
-
-resource "google_compute_subnetwork" "bastion" {
-  name          = var.bastion_name
-  ip_cidr_range = var.bastion_cidr
-  region        = var.region
-  network       = google_compute_network.network.id
-}

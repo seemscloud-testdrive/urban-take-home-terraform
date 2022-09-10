@@ -14,20 +14,6 @@ terraform_ssh_key_pub = "terraform:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCkuj+Ce
 #############################################
 # GKE Clusters
 #
-aaa_instance_aaa-name                  = "bastion"
-aaa_instance_aaa-machine_type          = "e2-highcpu-2"
-aaa_instance_aaa-zone                  = null
-aaa_instance_aaa-tags                  = ["bastion", "all"]
-aaa_instance_aaa-cidr                  = "10.0.10.0/24"
-aaa_instance_aaa-address_type          = "EXTERNAL"
-aaa_instance_aaa-desired_status        = "RUNNING"
-aaa_instance_aaa-boot_image            = "ubuntu-2004-lts"
-aaa_instance_aaa-boot_disk_size        = 32
-aaa_instance_aaa-boot_disk_type        = "pd-ssd"
-aaa_instance_aaa-boot_disk_auto_delete = false
-aaa_instance_aaa-preemptible           = false
-aaa_instance_aaa-automatic_restart     = false
-
 aaa_cluster_aaa-network           = "network"
 aaa_cluster_aaa-preemptible       = true
 aaa_cluster_aaa-name              = "seemscloud"

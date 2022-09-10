@@ -9,6 +9,13 @@ resource "google_compute_firewall" "internet_to_vpn" {
     ]
   }
 
+  allow {
+    protocol = "udp"
+    ports    = [
+      "1194"
+    ]
+  }
+
   source_ranges = [
     "0.0.0.0/0"
   ]

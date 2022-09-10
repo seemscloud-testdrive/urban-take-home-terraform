@@ -11,7 +11,7 @@ resource "google_container_cluster" "aaa_gke_aaa" {
 
   master_authorized_networks_config {
     cidr_blocks {
-      cidr_block = var.bastion_cidr
+      cidr_block = var.cluster_authorized_cidr
     }
   }
 
@@ -68,7 +68,6 @@ resource "google_container_cluster" "aaa_gke_aaa" {
   depends_on = [
     google_compute_network.network,
     google_compute_subnetwork.cluster,
-    google_compute_subnetwork.bastion,
     google_service_account.aaa_gke_aaa
   ]
 }
