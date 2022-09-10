@@ -40,6 +40,7 @@ aaa_instance_bbb-name                  = "jenkins"
 aaa_instance_bbb-machine_type          = "e2-highcpu-2"
 aaa_instance_bbb-zone                  = null
 aaa_instance_bbb-tags                  = ["jenkins", "all"]
+aaa_instance_bbb-static_ip             = "10.0.11.100"
 aaa_instance_bbb-cidr                  = "10.0.11.0/24"
 aaa_instance_bbb-address_type          = "EXTERNAL"
 aaa_instance_bbb-desired_status        = "RUNNING"

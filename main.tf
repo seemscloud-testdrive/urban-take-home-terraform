@@ -35,6 +35,7 @@ module "jenkins" {
   machine_type          = var.aaa_instance_bbb-machine_type
   zone                  = var.aaa_instance_bbb-zone
   tags                  = var.aaa_instance_bbb-tags
+  static_ip             = var.aaa_instance_bbb-static_ip
   cidr                  = var.aaa_instance_bbb-cidr
   address_type          = var.aaa_instance_bbb-address_type
   desired_status        = var.aaa_instance_bbb-desired_status

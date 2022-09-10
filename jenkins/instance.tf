@@ -18,6 +18,8 @@ resource "google_compute_instance" "jenkins" {
   network_interface {
     network    = var.network.id
     subnetwork = google_compute_subnetwork.jenkins.id
+
+    network_ip = var.static_ip
   }
 
   scheduling {
