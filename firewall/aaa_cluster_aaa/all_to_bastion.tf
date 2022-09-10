@@ -1,4 +1,4 @@
-resource "google_compute_firewall" "internet_to_aaa_interface_aaa" {
+resource "google_compute_firewall" "internet_to_bastion" {
   name    = "internet-to-bastion"
   network = var.network.name
 
@@ -11,5 +11,9 @@ resource "google_compute_firewall" "internet_to_aaa_interface_aaa" {
 
   source_ranges = [
     "0.0.0.0/0"
+  ]
+
+  target_tags = [
+    "bastion"
   ]
 }
