@@ -23,6 +23,9 @@ module "aaa_cluster_aaa" {
   cluster_static_ips_name   = var.aaa_cluster_aaa-static_ips_name
   cluster_static_ips_type   = var.aaa_cluster_aaa-static_ips_type
   cluster_static_ips        = var.aaa_cluster_aaa-static_ips
+  cluster_managed_zone      = var.aaa_cluster_aaa-managed_zone
+  cluster_managed_zone_dns  = var.aaa_cluster_aaa-managed_zone_dns
+  cluster_visibility        = var.aaa_cluster_aaa-visibility
 }
 
 module "jenkins" {
@@ -46,6 +49,7 @@ module "jenkins" {
   boot_disk_auto_delete = var.aaa_instance_bbb-boot_disk_auto_delete
   preemptible           = var.aaa_instance_bbb-preemptible
   automatic_restart     = var.aaa_instance_bbb-automatic_restart
+  internal_dns          = module.aaa_cluster_aaa.managed_dns
 }
 
 module "vpn" {
@@ -69,4 +73,5 @@ module "vpn" {
   boot_disk_auto_delete = var.aaa_instance_ccc-boot_disk_auto_delete
   preemptible           = var.aaa_instance_ccc-preemptible
   automatic_restart     = var.aaa_instance_ccc-automatic_restart
+  internal_dns          = module.aaa_cluster_aaa.managed_dns
 }

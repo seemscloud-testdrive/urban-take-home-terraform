@@ -20,3 +20,6 @@ variable "cluster_init" { type = string }
 variable "cluster_static_ips_name" { type = string }
 variable "cluster_static_ips_type" { type = string }
 variable "cluster_static_ips" { type = number }
+variable "cluster_managed_zone" { type = string }
+variable "cluster_managed_zone_dns" { type = string }
+variable "cluster_visibility" { type = string }

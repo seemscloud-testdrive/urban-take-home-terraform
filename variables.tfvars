@@ -32,6 +32,9 @@ aaa_cluster_aaa-init              = 1
 aaa_cluster_aaa-static_ips_name   = "external-apps"
 aaa_cluster_aaa-static_ips_type   = "EXTERNAL"
 aaa_cluster_aaa-static_ips        = 2
+aaa_cluster_aaa-managed_zone      = "internal"
+aaa_cluster_aaa-managed_zone_dns  = "seemscloud.internal."
+aaa_cluster_aaa-visibility        = "private"
 
 #############################################
 # VPN / Jenkins

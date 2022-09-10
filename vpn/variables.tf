@@ -20,3 +20,9 @@ variable "boot_disk_type" { type = string }
 variable "boot_disk_auto_delete" { type = bool }
 variable "preemptible" { type = bool }
 variable "automatic_restart" { type = bool }
+variable "internal_dns" {
+  type = object({
+    dns_name = string
+    name     = string
+  })
+}

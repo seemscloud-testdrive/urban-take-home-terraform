@@ -32,6 +32,9 @@ variable "aaa_cluster_aaa-init" { type = number }
 variable "aaa_cluster_aaa-static_ips_name" { type = string }
 variable "aaa_cluster_aaa-static_ips_type" { type = string }
 variable "aaa_cluster_aaa-static_ips" { type = number }
+variable "aaa_cluster_aaa-managed_zone" { type = string }
+variable "aaa_cluster_aaa-managed_zone_dns" { type = string }
+variable "aaa_cluster_aaa-visibility" { type = string }
 
 #############################################
 # VPN / Jenkins
