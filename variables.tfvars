@@ -45,7 +45,7 @@ aaa_cluster_aaa-min_version       = "1.22.11-gke.400"
 aaa_cluster_aaa-init              = 1
 aaa_cluster_aaa-static_ips_name   = "external-apps"
 aaa_cluster_aaa-static_ips_type   = "EXTERNAL"
-aaa_cluster_aaa-static_ips        = 1
+aaa_cluster_aaa-static_ips        = 2
 
 #############################################
 # VPN / Jenkins
