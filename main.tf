@@ -33,3 +33,47 @@ module "aaa_cluster_aaa" {
   cluster_min_version       = var.aaa_cluster_aaa-min_version
   cluster_init              = var.aaa_cluster_aaa-init
 }
+
+module "jenkins" {
+  source = "./jenkins"
+
+  project = var.project
+  region  = var.region
+  network = module.aaa_cluster_aaa.network
+
+  name                  = local.aaa_instance_bbb-name
+  machine_type          = var.aaa_instance_bbb-machine_type
+  zone                  = var.aaa_instance_bbb-zone
+  tags                  = var.aaa_instance_bbb-tags
+  cidr                  = var.aaa_instance_bbb-cidr
+  address_type          = var.aaa_instance_bbb-address_type
+  desired_status        = var.aaa_instance_bbb-desired_status
+  boot_image            = var.aaa_instance_bbb-boot_image
+  boot_disk_size        = var.aaa_instance_bbb-boot_disk_size
+  boot_disk_type        = var.aaa_instance_bbb-boot_disk_type
+  boot_disk_auto_delete = var.aaa_instance_bbb-boot_disk_auto_delete
+  preemptible           = var.aaa_instance_bbb-preemptible
+  automatic_restart     = var.aaa_instance_bbb-automatic_restart
+}
+
+module "vpn" {
+  source = "./vpn"
+
+  project = var.project
+  region  = var.region
+  network = module.aaa_cluster_aaa.network
+
+  name                  = local.aaa_instance_ccc-name
+  machine_type          = var.aaa_instance_ccc-machine_type
+  zone                  = var.aaa_instance_ccc-zone
+  tags                  = var.aaa_instance_ccc-tags
+  cidr                  = var.aaa_instance_ccc-cidr
+  address_type          = var.aaa_instance_ccc-address_type
+  desired_status        = var.aaa_instance_ccc-desired_status
+  boot_image            = var.aaa_instance_ccc-boot_image
+  boot_disk_size        = var.aaa_instance_ccc-boot_disk_size
+  boot_disk_type        = var.aaa_instance_ccc-boot_disk_type
+  boot_disk_auto_delete = var.aaa_instance_ccc-boot_disk_auto_delete
+  preemptible           = var.aaa_instance_ccc-preemptible
+  automatic_restart     = var.aaa_instance_ccc-automatic_restart
+}

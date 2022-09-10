@@ -45,7 +45,7 @@ variable "aaa_cluster_aaa-min_version" { type = string }
 variable "aaa_cluster_aaa-init" { type = number }
 
 #############################################
-# VPN
+# VPN / Jenkins
 #
 variable "aaa_instance_bbb-name" { type = string }
 variable "aaa_instance_bbb-machine_type" { type = string }

@@ -45,7 +45,7 @@ aaa_cluster_aaa-min_version       = "1.22.11-gke.400"
 aaa_cluster_aaa-init              = 1
 
 #############################################
-# Jenkins / VPN
+# VPN / Jenkins
 #
 aaa_instance_bbb-name                  = "jenkins"
 aaa_instance_bbb-machine_type          = "e2-highcpu-2"
