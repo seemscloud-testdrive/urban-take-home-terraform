@@ -16,7 +16,7 @@ resource "google_compute_router_nat" "generic" {
 
   subnetwork {
     name                    = google_compute_subnetwork.jenkins.id
-    source_ip_ranges_to_nat = [ "ALL_IP_RANGES"]
+    source_ip_ranges_to_nat = ["ALL_IP_RANGES"]
   }
 }
 
