@@ -1,27 +1,15 @@
 # Take Home
 
-## Architecture
-
-### Diagram
+## Architecture Diagram
 
 ![](docs/architecture.darw.io.drawio.png)
 
-### Cluster
-
-#### Authorized networks
+### Jenkins deployment
 
 ```bash
-172.18.0.0 255.255.255.240 (172.18.0.0/28)
+docker-compose up --build --remove-orphans --force-recreate --detach
 ```
 
-#### Cluster CIDR
-
-````bash
-10.52.0.0/14
-````
-
-#### Service CIDR
-
-````bash
-10.42.0.0/18
-````
+```yaml
+https://github.com/seemscloud/docker-jenkins
+```
