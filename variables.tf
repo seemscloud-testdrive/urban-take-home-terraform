@@ -54,6 +54,7 @@ variable "aaa_instance_ccc-name" { type = string }
 variable "aaa_instance_ccc-machine_type" { type = string }
 variable "aaa_instance_ccc-zone" { type = string }
 variable "aaa_instance_ccc-tags" { type = list(string) }
+variable "aaa_instance_ccc-static_ip" { type = string }
 variable "aaa_instance_ccc-cidr" { type = string }
 variable "aaa_instance_ccc-address_type" { type = string }
 variable "aaa_instance_ccc-desired_status" { type = string }

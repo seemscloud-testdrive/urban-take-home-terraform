@@ -19,6 +19,8 @@ resource "google_compute_instance" "vpn" {
     network    = var.network.id
     subnetwork = google_compute_subnetwork.vpn.id
 
+    network_ip = var.static_ip
+
     access_config {
       nat_ip = google_compute_address.vpn.address
     }

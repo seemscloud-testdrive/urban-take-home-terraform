@@ -10,6 +10,7 @@ variable "name" { type = string }
 variable "machine_type" { type = string }
 variable "zone" { type = string }
 variable "tags" { type = list(string) }
+variable "static_ip" { type = string }
 variable "cidr" { type = string }
 variable "address_type" { type = string }
 variable "desired_status" { type = string }

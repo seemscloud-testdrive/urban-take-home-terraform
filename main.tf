@@ -57,6 +57,7 @@ module "vpn" {
   machine_type          = var.aaa_instance_ccc-machine_type
   zone                  = var.aaa_instance_ccc-zone
   tags                  = var.aaa_instance_ccc-tags
+  static_ip             = var.aaa_instance_ccc-static_ip
   cidr                  = var.aaa_instance_ccc-cidr
   address_type          = var.aaa_instance_ccc-address_type
   desired_status        = var.aaa_instance_ccc-desired_status

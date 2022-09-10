@@ -54,6 +54,7 @@ aaa_instance_ccc-name                  = "vpn"
 aaa_instance_ccc-machine_type          = "e2-highcpu-2"
 aaa_instance_ccc-zone                  = null
 aaa_instance_ccc-tags                  = ["vpn", "all"]
+aaa_instance_ccc-static_ip             = "10.0.12.100"
 aaa_instance_ccc-cidr                  = "10.0.12.0/24"
 aaa_instance_ccc-address_type          = "EXTERNAL"
 aaa_instance_ccc-desired_status        = "RUNNING"
