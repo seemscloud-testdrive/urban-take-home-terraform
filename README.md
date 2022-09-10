@@ -6,13 +6,6 @@
 
 ![](docs/architecture.darw.io.drawio.png)
 
-### Networks
-
-```bash
-10.0.11.0 255.255.255.0
-10.0.12.0 255.255.255.0
-```
-
 ### Cluster
 
 #### Authorized networks

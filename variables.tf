@@ -45,7 +45,6 @@ variable "aaa_instance_bbb-zone" { type = string }
 variable "aaa_instance_bbb-tags" { type = list(string) }
 variable "aaa_instance_bbb-static_ip" { type = string }
 variable "aaa_instance_bbb-cidr" { type = string }
-variable "aaa_instance_bbb-address_type" { type = string }
 variable "aaa_instance_bbb-desired_status" { type = string }
 variable "aaa_instance_bbb-boot_image" { type = string }
 variable "aaa_instance_bbb-boot_disk_size" { type = number }

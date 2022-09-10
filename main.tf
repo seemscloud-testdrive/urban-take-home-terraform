@@ -28,8 +28,8 @@ module "aaa_cluster_aaa" {
   cluster_visibility        = var.aaa_cluster_aaa-visibility
 }
 
-module "jenkins" {
-  source = "./jenkins"
+module "management" {
+  source = "./management"
 
   project = var.project
   region  = var.region
@@ -41,7 +41,6 @@ module "jenkins" {
   tags                  = var.aaa_instance_bbb-tags
   static_ip             = var.aaa_instance_bbb-static_ip
   cidr                  = var.aaa_instance_bbb-cidr
-  address_type          = var.aaa_instance_bbb-address_type
   desired_status        = var.aaa_instance_bbb-desired_status
   boot_image            = var.aaa_instance_bbb-boot_image
   boot_disk_size        = var.aaa_instance_bbb-boot_disk_size

@@ -4,16 +4,9 @@ resource "google_compute_firewall" "vpn_to_jenkins" {
 
   allow {
     protocol = "tcp"
-    ports    = [
-      "22"
-    ]
+    ports    = ["22", "80", "8080", "443", "8443"]
   }
 
-  source_tags = [
-    "vpn"
-  ]
-
-  target_tags = [
-    "jenkins"
-  ]
+  source_tags = ["vpn"]
+  target_tags = ["jenkins"]
 }

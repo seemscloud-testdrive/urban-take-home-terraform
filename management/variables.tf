@@ -12,7 +12,6 @@ variable "zone" { type = string }
 variable "tags" { type = list(string) }
 variable "static_ip" { type = string }
 variable "cidr" { type = string }
-variable "address_type" { type = string }
 variable "desired_status" { type = string }
 variable "boot_image" { type = string }
 variable "boot_disk_size" { type = number }
