@@ -9,6 +9,10 @@ resource "google_container_cluster" "aaa_gke_aaa" {
   initial_node_count       = var.cluster_init
   remove_default_node_pool = false
 
+  node_config {
+    preemptible = var.cluster_preemptible
+  }
+
   master_authorized_networks_config {
     cidr_blocks {
       cidr_block = var.cluster_authorized_cidr

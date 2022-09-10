@@ -7,6 +7,7 @@ module "aaa_cluster_aaa" {
 
   cluster_name              = local.aaa_cluster_aaa-name
   cluster_tags              = var.aaa_cluster_aaa-tags
+  cluster_preemptible       = var.aaa_cluster_aaa-preemptible
   cluster_nodes_cidr        = var.aaa_cluster_aaa-nodes_cidr
   cluster_master_cidr       = var.aaa_cluster_aaa-master_cidr
   cluster_cluster_cidr_name = var.aaa_cluster_aaa-cluster_cidr_name

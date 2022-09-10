@@ -4,6 +4,7 @@ variable "network" { type = string }
 
 variable "cluster_name" { type = string }
 variable "cluster_tags" { type = list(string) }
+variable "cluster_preemptible" { type = bool }
 variable "cluster_nodes_cidr" { type = string }
 variable "cluster_master_cidr" { type = string }
 variable "cluster_cluster_cidr_name" { type = string }
