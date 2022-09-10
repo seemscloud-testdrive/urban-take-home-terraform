@@ -1,5 +1,5 @@
 resource "google_compute_instance" "jenkins" {
-  name           = var.name
+  name           = "${var.name}-jenkins"
   machine_type   = var.machine_type
   zone           = var.zone == null ? random_shuffle.google_compute_zones.result[0] : var.zone
   tags           = var.tags
@@ -17,7 +17,7 @@ resource "google_compute_instance" "jenkins" {
 
   network_interface {
     network    = var.network.id
-    subnetwork = google_compute_subnetwork.jenkins.id
+    subnetwork = google_compute_subnetwork.management.id
 
     network_ip = var.static_ip
   }

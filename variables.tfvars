@@ -39,7 +39,7 @@ aaa_cluster_aaa-visibility        = "private"
 #############################################
 # VPN / Jenkins
 #
-aaa_instance_bbb-name                  = "management"
+aaa_instance_bbb-name                  = "mgmt"
 aaa_instance_bbb-machine_type          = "e2-highcpu-2"
 aaa_instance_bbb-zone                  = null
 aaa_instance_bbb-tags                  = ["jenkins", "all"]

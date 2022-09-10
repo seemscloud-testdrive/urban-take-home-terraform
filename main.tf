@@ -28,8 +28,8 @@ module "aaa_cluster_aaa" {
   cluster_visibility        = var.aaa_cluster_aaa-visibility
 }
 
-module "management" {
-  source = "./management"
+module "mgmt" {
+  source = "./mgmt"
 
   project = var.project
   region  = var.region
