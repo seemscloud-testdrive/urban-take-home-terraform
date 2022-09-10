@@ -43,6 +43,9 @@ variable "aaa_cluster_aaa-private_endpoints" { type = bool }
 variable "aaa_cluster_aaa-type" { type = string }
 variable "aaa_cluster_aaa-min_version" { type = string }
 variable "aaa_cluster_aaa-init" { type = number }
+variable "aaa_cluster_aaa-static_ips_name" { type = string }
+variable "aaa_cluster_aaa-static_ips_type" { type = string }
+variable "aaa_cluster_aaa-static_ips" { type = number }
 
 #############################################
 # VPN / Jenkins

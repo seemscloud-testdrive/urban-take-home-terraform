@@ -43,6 +43,9 @@ aaa_cluster_aaa-private_endpoints = true
 aaa_cluster_aaa-type              = "e2-standard-2"
 aaa_cluster_aaa-min_version       = "1.22.11-gke.400"
 aaa_cluster_aaa-init              = 1
+aaa_cluster_aaa-static_ips_name   = "external-apps"
+aaa_cluster_aaa-static_ips_type   = "EXTERNAL"
+aaa_cluster_aaa-static_ips        = 1
 
 #############################################
 # VPN / Jenkins
@@ -61,10 +64,12 @@ aaa_instance_bbb-boot_disk_auto_delete = false
 aaa_instance_bbb-preemptible           = true
 aaa_instance_bbb-automatic_restart     = false
 
-aaa_instance_ccc-name                  = "vpn"
-aaa_instance_ccc-machine_type          = "e2-highcpu-2"
-aaa_instance_ccc-zone                  = null
-aaa_instance_ccc-tags                  = ["vpn", "all"]
+aaa_instance_ccc-name         = "vpn"
+aaa_instance_ccc-machine_type = "e2-highcpu-2"
+aaa_instance_ccc-zone         = null
+aaa_instance_ccc-tags         = [
+  "vpn", "all"
+]
 aaa_instance_ccc-cidr                  = "10.0.12.0/24"
 aaa_instance_ccc-address_type          = "EXTERNAL"
 aaa_instance_ccc-desired_status        = "RUNNING"

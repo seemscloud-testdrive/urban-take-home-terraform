@@ -32,6 +32,9 @@ module "aaa_cluster_aaa" {
   cluster_type              = var.aaa_cluster_aaa-type
   cluster_min_version       = var.aaa_cluster_aaa-min_version
   cluster_init              = var.aaa_cluster_aaa-init
+  cluster_static_ips_name   = var.aaa_cluster_aaa-static_ips_name
+  cluster_static_ips_type   = var.aaa_cluster_aaa-static_ips_type
+  cluster_static_ips        = var.aaa_cluster_aaa-static_ips
 }
 
 module "jenkins" {
